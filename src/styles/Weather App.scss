@@ -1,0 +1,229 @@
+$main-color: #fff;
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("https://images.unsplash.com/photo-1445112098124-3e76dd67983c?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    
+
+    min-height: 100vh;
+}
+
+.card {
+    position: relative;
+
+    color: $main-color;
+    background: rgba(255, 255, 255, .2);
+    background-size: cover;
+    background-position: center;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+
+    width: 400px;
+    max-width: 90%;
+
+    border: 2px solid rgb(255, 255, 255, .3);
+    border-radius: 25px;
+
+    padding: 2.5rem;
+}
+
+.search__box {
+    position: inherit;
+
+    display: flex;
+    align-items: center;
+
+    height: 3rem;
+
+    .fa-location-dot {
+        z-index: 1;
+        font-size: 1.3rem;
+        margin-left: .8rem;
+    }
+
+    .search__div {
+        position: absolute;
+
+        display: inherit;
+        align-items: center;
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+
+        border: 2px solid rgb(255, 255, 255, .5);
+        border-radius: 10px;
+
+        background: rgb(0, 0, 0, .2);
+
+        .search__input {
+            border: none;
+    
+            font-size: 18px;
+            letter-spacing: .9px;
+    
+            width: 100%;
+            height: 100%;
+    
+            caret-color: $main-color;
+            color: $main-color;
+            background: none;
+
+            padding-left: 3rem;
+        }
+    }
+    
+    .search__input::placeholder {
+        color: rgb(255, 255, 255, .5);
+    }
+
+    .search__input:focus {
+        outline: none;
+    }
+
+
+    .fa-magnifying-glass {
+        position: absolute;
+        right: .8rem;
+
+        font-size: 1.2rem;
+        color: $main-color;
+    }
+
+    .fa-magnifying-glass.hide {
+        display: none;
+    }
+
+    .clear__button {
+        position: absolute;
+        right: .4rem;
+
+        width: 2rem;
+        height: 2rem;
+
+        border: none;
+        border-radius: 50%;
+        background: none;
+
+        cursor: pointer;
+
+        .fa-x {
+            color: rgb(255, 255, 255, .7);
+        }
+    }
+
+    .clear__button:hover {
+        background: rgb(255, 255, 255, .2);
+    }
+
+    .clear__button.hide {
+        display: none;
+    }
+}
+
+.results__box {
+    position: absolute;
+
+    top: calc(2.5rem + 3rem + .5rem);
+
+    width: calc(100% - 5rem);
+    max-height: 250px;
+
+    border-radius: 10px;
+    background: #233650;
+
+    overflow: auto;
+
+    .results__ul li {
+        list-style: none;
+
+        cursor: pointer;
+
+        padding: .5rem 1rem .5rem 3rem;
+    }
+
+    .results__ul li:hover {
+        background: #1A273B;
+    }
+}
+
+.weather__box {
+    margin-bottom: 2rem;
+
+    .weather__img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .error__image {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    .weather__temperature {
+        font-size: 32px;
+        font-weight: bolder;
+
+        margin-bottom: 1rem;
+    }
+
+    .country__info {
+        margin-bottom: .5rem;
+
+        span {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+
+    .weather__description {
+        font-style: italic;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .weather__img.hide,
+    .error__image.hide,
+    .weather__temperature.hide,
+    .country.hide,
+    .weather__description.hide {
+        display: none;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .fa-solid {
+        font-size: 2.8rem;
+        margin-right: 1rem;
+    }
+
+    .humidity, .wind {
+        font-size: 1.2rem;
+    }
+
+    div p:first-child {
+        margin-bottom: 5px; 
+    }
+}
+
+.flex.hide {
+    display: none;
+}

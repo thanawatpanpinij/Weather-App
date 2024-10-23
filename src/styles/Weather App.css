@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://images.unsplash.com/photo-1445112098124-3e76dd67983c?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.card {
+  position: relative;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  background-size: cover;
+  background-position: center;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  width: 400px;
+  max-width: 90%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 2.5rem;
+}
+
+.search__box {
+  position: inherit;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
+.search__box .fa-location-dot {
+  z-index: 1;
+  font-size: 1.3rem;
+  margin-left: 0.8rem;
+}
+.search__box .search__div {
+  position: absolute;
+  display: inherit;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.search__box .search__div .search__input {
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.9px;
+  width: 100%;
+  height: 100%;
+  caret-color: #fff;
+  color: #fff;
+  background: none;
+  padding-left: 3rem;
+}
+.search__box .search__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.search__box .search__input:focus {
+  outline: none;
+}
+.search__box .fa-magnifying-glass {
+  position: absolute;
+  right: 0.8rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.search__box .fa-magnifying-glass.hide {
+  display: none;
+}
+.search__box .clear__button {
+  position: absolute;
+  right: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+.search__box .clear__button .fa-x {
+  color: rgba(255, 255, 255, 0.7);
+}
+.search__box .clear__button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.search__box .clear__button.hide {
+  display: none;
+}
+
+.results__box {
+  position: absolute;
+  top: 6rem;
+  width: calc(100% - 5rem);
+  max-height: 250px;
+  border-radius: 10px;
+  background: #233650;
+  overflow: auto;
+}
+.results__box .results__ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem 0.5rem 3rem;
+}
+.results__box .results__ul li:hover {
+  background: #1A273B;
+}
+
+.weather__box {
+  margin-bottom: 2rem;
+}
+.weather__box .weather__img {
+  display: block;
+  margin: 0 auto;
+}
+.weather__box .error__image {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
+.weather__box .weather__temperature {
+  font-size: 32px;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+.weather__box .country__info {
+  margin-bottom: 0.5rem;
+}
+.weather__box .country__info span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.weather__box .weather__description {
+  font-style: italic;
+}
+.weather__box .center {
+  text-align: center;
+}
+.weather__box .weather__img.hide,
+.weather__box .error__image.hide,
+.weather__box .weather__temperature.hide,
+.weather__box .country.hide,
+.weather__box .weather__description.hide {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex .fa-solid {
+  font-size: 2.8rem;
+  margin-right: 1rem;
+}
+.flex .humidity, .flex .wind {
+  font-size: 1.2rem;
+}
+.flex div p:first-child {
+  margin-bottom: 5px;
+}
+
+.flex.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=weather%20app.css.map */
